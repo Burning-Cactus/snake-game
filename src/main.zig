@@ -60,10 +60,10 @@ fn placeBall() void {
 }
 
 fn screenWrap(entity: *Position) void {
-    if (entity.x < 0 or entity.x > width) {
+    if (entity.x < 0 or entity.x >= width) {
         entity.x = @mod(entity.x, width);
     }
-    if (entity.y < 0 or entity.y > height) {
+    if (entity.y < 0 or entity.y >= height) {
         entity.y = @mod(entity.y, height);
     }
 }
